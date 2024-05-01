@@ -1,0 +1,129 @@
+@import url(https://fonts.googleapis.com/css?family=Bebas+Neue:regular);
+
+:root {
+  --clr-neon: rgba(0, 0, 44, 1); /* Color neon similar a rgba(0,0,44,255) */
+  --clr-bg: hsl(323, 21%, 16%); /* Color de fondo */
+}
+
+h1 {
+    font-weight: normal;
+    color: white;
+}
+
+div.info {
+    margin: 12px 0;
+}
+
+div.info * {
+    color: white;
+}
+
+#icons {
+    display: none;
+    filter: drop-shadow(0 0 10px var(--clr-neon)); /* Ajustamos el resplandor de los iconos */
+}
+
+.container {
+    position: absolute;
+    left: 1000px;
+}
+
+#vehicle {
+    fill: white;
+}
+
+div.menuHolder {
+    user-select: none;
+    -moz-user-select: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 30%;
+}
+
+svg.icons {
+    display: none;
+}
+
+svg.menu {
+    position: absolute;
+    overflow: visible;
+    transition: .1s;
+    transition-timing-function: ease-out;
+}
+
+svg.menu.inner {
+    transform: scale(0.66) rotate(-10deg);
+    opacity: 0;
+    visibility: hidden;
+}
+
+svg.menu.outer {
+    opacity: 0;
+    visibility: hidden;
+}
+
+svg.menu > g > path {
+    fill: none; /* No relleno */
+    stroke: var(--clr-neon); /* Borde del color neon */
+    stroke-width: 0.03em;
+    stroke-opacity: 0.5; /* Reducimos la opacidad del borde */
+    filter: drop-shadow(0 0 5px var(--clr-neon)); /* Efecto de resplandor exterior */
+}
+
+svg.menu > g.sector > path {
+    cursor: pointer;
+    fill: var(--clr-neon); /* Relleno con color neon */
+    opacity: 0.6; /* Opacidad ajustada para resaltar el neon */
+}
+
+svg.menu > g.sector > text,
+svg.menu > g.sector > use {
+    font-family: 'Bebas neue', sans-serif;
+    margin-top: 5px;
+    font-size: 0.25rem;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: bold;
+    fill: white;
+    color: var(--clr-neon);
+    text-shadow: 0 0 2px var(--clr-neon), /* Ajustamos el resplandor del texto */
+                 0 0 5px var(--clr-neon), /* Ajustamos el resplandor del texto */
+                 0 0 10px var(--clr-neon); /* Ajustamos el resplandor del texto */
+}
+
+svg.menu > g.sector:hover > text,
+svg.menu > g.sector:hover > use {
+    fill: rgb(255, 255, 255);
+}
+
+svg.menu > g.sector:hover > path {
+    fill: rgb(255, 255, 255);
+}
+
+svg.menu > g.sector:hover > svg {
+    fill: rgb(255, 255, 255);
+}
+
+svg.menu > g.center > circle {
+    fill: rgb(1, 27, 66); /* Cambiado a un tono de azul más oscuro */
+    opacity: 0.2;
+    stroke: var(--clr-neon); /* Borde del color neon */
+    stroke-width: 0.06em; /* Ancho del borde */
+    stroke-opacity: 0.5; /* Reducimos la opacidad del borde */
+    filter: drop-shadow(inset 0 0 10px var(--clr-neon)) drop-shadow(inset 0 0 20px var(--clr-neon)); /* Efecto de resplandor */
+}
+
+svg.menu > g.center > text,
+svg.menu > g.center > use {
+    margin-top: 5px;
+    font-size: 2.5px;
+    cursor: pointer;
+    fill: white;
+    text-shadow: 0 0 2px var(--clr-neon), /* Ajustamos el resplandor del texto */
+                 0 0 5px var(--clr-neon), /* Ajustamos el resplandor del texto */
+                 0 0 10px var(--clr-neon); /* Ajustamos el resplandor del texto */
+}
